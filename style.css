@@ -1,0 +1,34 @@
+* {
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  padding: 2rem;
+}
+
+section {
+  border-top: 1px solid #ffff00;
+  margin-bottom: 60x;
+  padding-bottom: 60px;
+}
+
+h1, h2 {
+  color: #ffff00;
+}
+
+table {
+  display: block;
+  margin: 0 auto 0 0;
+}
+table thead tr, table thead th, table thead td {
+  background-color: #fff;
+  color: #000;
+}
+table tr {
+  bottom: 1px solid #fff;
+}
+table th, table td {
+  border: 1px solid #fff;
+  padding: 1rem;
+}/*# sourceMappingURL=style.css.map */
