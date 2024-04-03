@@ -1,4 +1,4 @@
-# JSON・MarkdownファイルをHTMLに読み込む
+# JSON・MarkdownファイルをHTMLに読み込む（XMLHttpRequestを使う場合）
 webサイトを制作していて、フロントエンドのコードとデータを分けて管理したい時ってありますよね？
 
 - プロフィールなどのちょっとしたデータのまとまりをページ内に表示したいけど、データベースを作るほどではない…
@@ -6,6 +6,14 @@ webサイトを制作していて、フロントエンドのコードとデー�
 - なるべく素のJavaScriptで処理したい（Node.jsのfsとかを使うほどではない...）
 
 といった場合に、JSONやMarkdownファイルを直接HTMLファイルに読み込む方法を調べました。
+
+## XMLHttpRequest　APIとFetch API
+今回のように外部ファイルの内容を取得・表示する場合、XMLHttpRequestオブジェクトを利用する方法とFetchを利用する方法の2つのやり方があります。
+FetchはPromiseベースで設計された新しいAPIで、非同期処理をXMLHttpRequestを利用する場合よりもスマートに実装できるので、Fetchを利用するのがよりモダンな書き方になります。
+
+Fetchを利用する方法はこちら（https://qiita.com/outsider-kithy/items/785685507191014fc834）
+
+本記事では、XMLHttpRequest　APIを利用する方法を説明します。
 
 ## JSONファイルを読み込む場合
 まず、JSONファイルを読み込んでDOMに追加する場合のやり方です。
@@ -132,3 +140,4 @@ HTMLへの出力の部分では、`Marked.js`の`marked.parse()`メソッドを�
 
 ![markdown.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2781928/93b2bbba-1c3d-b0cf-10da-0617866f7424.png)
 
+コードの全文はこちら（https://github.com/outsider-kithy/parseJSON.git）
